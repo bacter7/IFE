@@ -1,0 +1,16 @@
+
+ul {
+	padding-left: 0px;
+}
+
+li {
+	display: inline-block;
+	margin-right: 20px;
+}
+article {
+	margin-top: 20px;
+}
+
+.bukong {
+	margin: 5px auto;
+}

@@ -1,0 +1,33 @@
+
+h1 {
+	margin-top: 30px;
+	text-align: center;
+	font-size: 45px;
+	color: white;
+}
+
+.resume {
+    float: left;
+	width: 200px;
+	height: 700px;
+	margin-right: 30px;
+	background-color: lightgreen;
+	background-clip: border-box;
+}
+
+ul {
+	padding-left: 0px;
+}
+
+li {
+	display: inline-block;
+	margin-right: 20px;
+}
+article {
+	margin-top: 20px;
+}
+
+
+.bukong {
+	margin: 5px auto;
+}
