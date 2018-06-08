@@ -1,0 +1,28 @@
+html {
+  font-family: sans-serif;
+}
+
+span, div em {
+  padding: 10px;
+  border: 1px solid green;
+  display: inline-block;
+  margin-bottom: 3px;
+}
+    
+/*.first span:nth-child(3n+1),
+.second span:nth-child(2n+1),
+.third span:nth-of-type(2n+1) {
+  background-color: lime;
+}*/
+
+
+.first .f1:nth-of-type(2) {
+  background-color: lime;
+}
+
+.second .f3:nth-of-type(6) {
+  background-color: lime;
+}
+.third .f3:nth-of-type(7) {
+  background-color: lime;
+}

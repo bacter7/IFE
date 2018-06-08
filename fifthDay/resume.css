@@ -1,0 +1,90 @@
+body {
+	width: 
+
+
+}
+html {
+	width: 50%;
+	position: relative;
+	left: 25%;
+	border-style:double;
+
+}
+h1 {
+	text-align: center;
+	color: blue;
+	border-style: dashed dotted double;
+	border-left: 4px solid red;
+	border-right-color: orange;
+	border-radius: 10px 100px /20px  40px;
+}
+section #base-info{
+
+}
+
+a[href*="http"] {
+  background: url('https://mdn.mozillademos.org/files/12982/external-link-52.png') no-repeat 100% 0;
+  background-size: 16px 16px;
+  padding-right: 19px;
+}
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:focus, a:hover {
+  border-bottom: 1px solid;
+}
+
+a:active {
+  color: red;
+}
+
+ul {
+	list-style-type: lower-greek;
+
+}
+dl strong{
+	font-size: 25px;
+	text-shadow:3px 2px 1px green;
+}
+
+dt {
+	text-indent:15px;
+	line-height:30px;
+}
+
+dd {
+	font-family:Times New Roman;
+	font-style:italic;
+	font-weight:bold;
+}
+
+.profile {
+	background-color: lightblue;
+	font-size: 13px;
+  border: 10px solid;
+  background-clip: border-box;
+  border-image-source: url(https://mdn.mozillademos.org/files/13060/border-image.png);
+  border-image-slice: 60 50 40;
+  border-image-repeat: space;
+}
+
+
+.profile li {
+	list-style: none; 
+}
+#Life dl dt{
+	text-decoration:underline;
+}
+#Travel {
+	background: lightblue url("E:/DATA/Git/IFE/forthDay/travel.jpg")  no-repeat left center;
+	background-size: 16px 16px;
+}
+#Read {
+	background:orange url("E:/DATA/Git/IFE/forthDay/read.jpg") no-repeat left center;
+	background-size: 16px 16px;
+}

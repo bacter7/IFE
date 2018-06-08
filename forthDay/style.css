@@ -1,0 +1,47 @@
+body {
+	height: 2000px;
+}
+
+section {
+	display:flex;
+	/*height: 400px;*/
+}
+
+article {
+	height:400px;
+	width: 300px;
+	color: orange;
+	overflow: auto;
+	background-color: yellow;
+	background-image: url("E:/DATA/Git/IFE/forthDay/15.png");
+}
+pre {
+	height: 800px;
+}
+p {
+	font-family: sans-serif;
+	padding: 20px;
+	/* background properties */
+	background-repeat: repeat-y;
+	background-position: 45% center;
+
+	padding: 10px;
+  background: yellow;
+  border: 2px solid red;
+}
+.scroll {
+	background-attachment:scroll;
+}
+.fixed {
+	background-attachment:fixed;
+}
+.local {
+	background-attachment:local;
+}
+
+div {
+background: url(15.png) no-repeat 99% center,
+            url(152.png) no-repeat,
+            linear-gradient(to bottom, yellow, #dddd00 50%, orange);
+background-color: yellow;
+}

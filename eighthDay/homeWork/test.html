@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="test.css">
+</head>
+<body>
+	<p><code>span:nth-child(2n+1)</code>, <em>without</em> an <code>&lt;em&gt;</code>
+ inside the child elements. Children 1, 3, 5, and 7 are selected, as expected.</p>
+
+<div class="first">
+      <span class="f1">This span is selected!</span>
+      <span class="f1">This span is not. :(</span>
+      <span class="f1">What about this?</span>
+      <span class="f2">And this one?</span>
+      <span class="f2">Another example</span>
+      <span class="f3">Yet another example</span>
+      <span class="f3">Aaaaand another</span>
+</div>
+
+<p><code>span:nth-child(2n+1)</code>, <em>with</em> an <code>&lt;em&gt;</code>
+ inside the child elements. Children 1, 5, and 7 are selected. 3 is used in the
+ counting because it is a child, but it isn't selected because it isn't a 
+<code>&lt;span&gt;</code>.</p>
+
+<div class="second">
+      <span class="f1">This span is selected!</span>
+      <span class="f1">This span is not. :(</span>
+      <em>This one is an em.</em>
+      <span class="f1">What about this?</span>
+      <span class="f2">And this one?</span>
+      <span class="f2">Another example</span>
+      <span class="f3">Yet another example</span>
+      <span class="f3">Aaaaand another</span>
+</div>
+
+<p><code>nth-of-type(2n+1)</code>, <em>with</em> an <code>&lt;em&gt;</code>
+ inside the child elements. Children 1, 4, 6, and 8 are selected. 3 isn't
+ used in the counting or selected because it is an <code>&lt;em&gt;</code>, 
+not a <code>&lt;span&gt;</code>, and <code>nth-of-type</code> only selects
+ children of that type. The <code>&lt;em&gt;</code> is completely skipped
+ over and ignored.</p>
+ 
+  <div class="third">
+      <span class="f1">This span is selected!</span>
+      <span class="f1">This span is not. :(</span>
+      <span class="f1">What about this?</span>
+      <em>This one is an em.</em>
+      <span class="f2">And this one?</span>
+      <span class="f2">Another example</span>
+      <span class="f3">Yet another example</span>
+      <span class="f3">Aaaaand another</span>
+</div>
+
+</body>
+</html>

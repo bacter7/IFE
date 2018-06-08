@@ -1,0 +1,13 @@
+.wrapper{
+    overflow: auto;        // 清除浮动
+}
+
+.wrapper .left,
+.wrapper .right {
+    float: left;
+    box-sizing: border-box;
+}
+
+.wrapper .right {
+    width: calc(100% - 140px);
+}

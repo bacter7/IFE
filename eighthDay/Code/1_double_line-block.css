@@ -1,0 +1,11 @@
+.wrapper .left,
+.wrapper .right {
+    display: inline-block;
+    vertical-align: top;    // 顶端对齐
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.wrapper .right {
+    width: calc(100% - 150px);
+}

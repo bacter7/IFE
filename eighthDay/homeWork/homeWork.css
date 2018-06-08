@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+div {
+  background-color: green;
+}
+#container {
+  background-color: orange;
+}
+
+/*实现一个两栏布局，左侧占30%宽度，右侧占70%宽度*/
+section:nth-of-type(1) article:nth-of-type(1){
+  display: flex; 
+}
+
+section:nth-of-type(1) article:nth-of-type(1) div:nth-of-type(1) {
+  width: 30%;
+  background-color: red;
+}
+section:nth-of-type(1) article:nth-of-type(1) div:nth-of-type(2) {
+  width: 70%;
+  background-color: aqua;
+}
+
+/*实现一个两栏布局，左侧固定宽度，右侧根据浏览器宽度进行自适应变化*/
+section:nth-of-type(1) article:nth-of-type(2){
+  display: flex; 
+}
+
+section:nth-of-type(1) article:nth-of-type(2) div:nth-of-type(1) {
+  width: 300px;
+  background-color: red;
+}
+
+section:nth-of-type(1) article:nth-of-type(2) div:nth-of-type(2) {
+  flex:1;
+  background-color: aqua;
+}
+
+/*实现一个两栏布局，右侧固定宽度，左侧根据浏览器宽度进行自适应变化*/
+section:nth-of-type(1) article:nth-of-type(3){
+  display: flex; 
+}
+
+section:nth-of-type(1) article:nth-of-type(3) div:nth-of-type(1) {
+  flex:1;
+  background-color: red;
+}
+
+section:nth-of-type(1) article:nth-of-type(3) div:nth-of-type(2) {
+  width: 300px;
+  background-color: aqua;
+}
+/*实现一个三栏布局，左侧固定宽度，右侧固定宽度，中间部分宽度随浏览器宽度变化而自适应变化*/
+section:nth-of-type(2) article:nth-of-type(1){
+  display: flex; 
+}
+
+section:nth-of-type(2) article:nth-of-type(1) div:nth-of-type(1) {
+  width: 300px;
+  background-color: red;
+}
+
+section:nth-of-type(2) article:nth-of-type(1) div:nth-of-type(2) {
+  flex:1;
+  background-color: aqua;
+}
+section:nth-of-type(2) article:nth-of-type(1) div:nth-of-type(3) {
+  width: 300px;
+  background-color: blue;
+}
+/*实现一个三栏布局，左侧固定宽度，中间固定宽度，右侧根据浏览器宽度变化而自适应变化*/
+section:nth-of-type(2) article:nth-of-type(2){
+  display: flex; 
+}
+
+section:nth-of-type(2) article:nth-of-type(2) div:nth-of-type(1) {
+  width: 300px;
+  background-color: red;
+}
+
+section:nth-of-type(2) article:nth-of-type(2) div:nth-of-type(2) {
+  width: 300px;
+  background-color: aqua;
+}
+section:nth-of-type(2) article:nth-of-type(2) div:nth-of-type(3) {
+  flex:1;
+  background-color: blue;
+}

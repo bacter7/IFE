@@ -1,0 +1,11 @@
+.wrapper {
+	position: absolute;
+	overflow: auto;
+}
+.wrapper .left {
+position: absolute;
+}
+
+.wrapper .right {
+    margin-left: 150px;
+}

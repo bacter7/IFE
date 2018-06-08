@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+}
+.fake-content{
+  margin-left: 50px;
+  background-color: red;
+  height: 2000px;
+   margin-left: 470px;
+}
+
+.info-box {
+  position: fixed;
+  width: 450px;
+  height: 500px;
+}
+
+.info-box > ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.info-box > ul > li {
+  width: 150px;
+  float: left;
+  list-style-type: none;
+
+}
+.info-box > ul > li > a {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  line-height: 3;
+  color: black;
+  background-color: red;
+}
+
+
+.info-box > ul > li a:focus , .info-box > ul > li a:hover {
+ background-color: green;
+  color: white;
+}
+
+.info-box li a.active {
+  background-color: green;
+  color: white;
+}
+
+div {
+  position: relative;
+  width: 450px;
+  clear: left;
+}
+
+
+.info-box article {
+  height: 400px;
+  position: absolute;
+  background-color: green;
+}
+
+.active-panel {
+  z-index: 1;
+}

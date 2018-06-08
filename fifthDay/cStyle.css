@@ -1,0 +1,176 @@
+/* General styles */
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10px;
+}
+
+body {
+  color: green;
+}
+
+.inherit a {
+  color: inherit;
+}
+
+.initial a {
+  color: initial
+}
+
+.unset a {
+  color: unset;
+}
+
+/* specificity: 0101 */
+#outer a {
+  background-color: red;
+}
+
+/* specificity: 0201 */
+#outer #inner a {
+  background-color: blue;
+}
+
+/* specificity: 0104 */
+#outer div ul li a {
+  color: yellow;
+}
+
+/* specificity: 0113 */
+#outer div ul .nav a {
+  color: white;
+}
+
+/* specificity: 0024 */
+div div li:nth-child(2) a:hover {
+  border: 10px solid black;
+}
+
+/* specificity: 0023 */
+div li:nth-child(2) a:hover {
+  border: 10px dashed black;
+}
+
+/* specificity: 0033 */
+div div .nav:nth-child(2) a:hover {
+  border: 10px double black;
+}
+
+a {
+  display: inline-block;
+  line-height: 40px;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+#winning {
+  background-color: red;
+  border: 1px solid black;
+}
+
+.better {
+  background-color: gray;
+  border: none !important;
+}
+
+p {
+  background-color: blue;
+  color: white;
+  padding: 5px;
+}
+
+/* 基本的table样式 */
+table {
+  font: 1em sans-serif;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 所有在table里的td以及th，这里的逗号不是一个组合器，
+    它只是允许你把几个选择器对应到相同的CSS规则上.*/
+table td, table th {
+  border : 1px solid black;
+  padding: 0.5em 0.5em 0.4em;
+}
+
+/* 所有table里的thead里的所有th */
+table thead th {
+  color: white;
+  background: black;
+}
+
+/* 所有table里的tbody里的所有td，每个td都是由它上边的td选择 */
+table tbody td + td {
+  text-align: center;
+}
+
+/*table里所有的tbody里的td当中的最后一个 */
+table tbody td:last-child {
+  text-align: right
+}
+
+/* 所有table里的tfoot里的th */
+table tfoot th {
+  text-align: right;
+  border-top-width: 5px;
+  border-left: none;
+  border-bottom: none;
+}
+
+/* 在table当中，所有的th之后的td */
+table th + td {
+  text-align: right;
+  border-top-width: 5px;
+  color: white;
+  background: black;
+}
+
+/* 拥有属性lang并且这个属性值为en-US的类名为“with-currency”里边的td当中
+的最后一个元素添加一个伪类::before*/
+.with-currency[lang="en-US"] td:last-child::before {
+  content: '$';
+}
+
+/* 拥有属性lang并且这个属性值为fr的类名为“with-currency”里面的td当中的
+最后一个元素添加一个伪类::after */
+.with-currency[lang="fr"] td:last-child::after {
+  content: ' €';
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+ul,ol,dl,p {
+  font-size: 1.5rem;
+}
+
+li, p {
+  line-height: 1.5;
+}
+
+/* Description list styles */
+
+
+dd, dt {
+  line-height: 1.5;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 1.5rem;
+}

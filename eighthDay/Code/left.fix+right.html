@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+	<title>left_fix+right</title>
+
+	<style type="text/css">
+
+.left {
+    width: 120px;
+    border: 5px solid #ddd;
+}
+.right {
+    margin-left: 20px;
+    border: 5px solid #ddd;
+}
+	</style>
+	<!-- <link rel="stylesheet" type="text/css" href="1_double_line-block.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="2_double_float.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="3.float_margin-left.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="4.absolute_margin-left.css"> -->
+	<link rel="stylesheet" type="text/css" href="5.float_BFC.css">
+	<!-- <link rel="stylesheet" type="text/css" href="6.flex.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="7.grid.css"> -->
+</head>
+<body>
+
+</body>
+</html><div class="wrapper" id="wrapper">
+  <div class="left">
+    左边固定宽度，高度不固定 </br> </br></br></br>高度有可能会很小，也可能很大。
+  </div>
+    <div class="">
+    高度有可能会很小，也可能很大。 </br> </br></br></br>高度有可能会很小，也可能很大。
+  </div>
+  <div class="right">
+    这里的内容可能比左侧高，也可能比左侧低。宽度需要自适应。</br>
+    基本的样式是，两个div相距20px, 左侧div宽 120px
+  </div>
+</div>

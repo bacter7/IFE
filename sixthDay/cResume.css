@@ -46,10 +46,11 @@ article {
 
 section {
 	height: 120px;
-	border-top: 1px solid gray;
-	border-left: 1px solid gray;
-	border-right: 1px solid gray;
+	border-top: 1px solid #efefef;
+	border-left: 1px solid #efefef;
+	border-right: 1px solid #efefef;
 	box-sizing: border-box;
+	
 }
 section + section {
 	clear: left;
@@ -60,7 +61,7 @@ div {
 	display: inline-block;
 }
 section:nth-last-of-type(1) {
-	border-bottom: 1px solid gray;
+	border-bottom: 1px solid #efefef;
 }
 
 article:nth-last-of-type(3){

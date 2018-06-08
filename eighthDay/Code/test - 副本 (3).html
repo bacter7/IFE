@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Flexbox wrap 0 — children overflowing</title>
+  <style>
+
+  body {
+    min-width: 550px;      /* 2x LC width + RC width */
+    border: 1px solid black;
+  }
+  #bd {
+    padding-left: 200px;   /* LC width */
+    padding-right: 150px;  /* RC width */
+  }
+
+  #bd .column {        
+    position: relative;
+    float: left;
+  }
+
+  .main {         
+    width: 100%;   
+  }
+
+  .sub {        
+    width: 200px;          /* LC width */
+    right: 200px;
+    margin-left: -100%;
+  }
+
+  .extra {        
+    width: 150px;
+    margin-right: -150px;
+  }
+</style>
+</head>
+<body>
+
+  <div id="bd">        
+    <div class="main column">main</div>        
+    <div class="sub column">sub</div>        
+    <div class="extra column">extra</div>    
+  </div> 
+
+  <header>
+    <h1>Sample flexbox example</h1>
+  </header>
+</body>
+</html>

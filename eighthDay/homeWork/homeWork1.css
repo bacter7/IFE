@@ -1,0 +1,150 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	height: auto;
+}
+nav {
+	top: 0;
+	height: 50px;
+	background-color: black;
+	color: white;
+	vertical-align: middle;
+	line-height:240%;
+}
+nav a {
+	float: left;
+	color: white;
+	margin-left:100px;
+}
+nav ul {
+	font-size: 11px;
+}
+
+nav ul {
+	margin-left: 70%;
+}
+
+nav ul li {
+	display: inline-block;
+}
+
+section {
+	border: 1px solid black;
+}
+
+#nav-self {
+	width: 100%
+
+}
+
+#nav-self section {
+	width: 100%;
+	height: 50px;
+}
+
+#nav-self ul {
+	padding-left: 0;
+	margin-left: 15%;
+	margin-bottom: -1px;
+	letter-spacing: -8px;
+}
+
+#nav-self ul li {
+	height: 30px;
+	letter-spacing: normal;
+	vertical-align: bottom;
+	display: inline-block;
+	border: 1px solid black;
+	border-radius: 5px 5px 0 0;
+	border-bottom: unset;
+	background-color: lightgray;
+}
+#nav-self ul li a{
+	display: inline-block;
+	margin: 0;
+	padding: 5px 9px;
+text-decoration: none;
+}
+
+#Banner ul {
+	margin-left: 70%;
+	margin-top: 100px;
+}
+
+
+#Banner ul li {
+	display: inline-block;
+	border:  1px solid black;
+	vertical-align: bottom;
+	background-color: lightgreen;
+	width: 20px;
+	text-align: center;
+}
+#Banner ul li:nth-of-type(2) {
+	background-color: yellow;
+	height: 35px;
+	padding-top: 12px;
+}
+
+#container {
+	width: 70%;
+	margin: 0 auto;
+	margin-bottom: 60px;
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+}
+#container section {
+	padding: 5%;
+	align-items:center;
+    margin: 5px;
+}
+.firstLine {
+	flex: 1;
+	height: 100px;
+	min-width: 30%;
+}
+
+.secondLine {
+	flex: 1;
+	height: 100px;
+	min-width: 20%;
+}
+.thirdLine {
+	flex: 1;
+	height: 100px;
+	min-width: 30%;
+}
+
+.firstLine:nth-of-type(3){
+	max-width: 27%;
+}
+
+.thirdLine:nth-of-type(10){
+	min-width: 35%;
+}
+
+
+
+.clearfix {
+	clear:both;/*清除浮动*/
+}
+
+footer {
+	position: fixed;
+	width: 100%;
+	height: 60px;
+	text-align: center;
+	bottom: 0px;
+	background-color: gray;
+}
+#Banner {
+	background-color: green;
+	height: 150px;
+}
+
+li a:focus, li a:hover,li a:active {
+  background-color: white;
+  color: black;
+}
