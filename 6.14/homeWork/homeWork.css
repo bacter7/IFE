@@ -1,0 +1,416 @@
+* {
+  
+}
+
+body {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+section {
+  /*border:1px solid gray;*/
+}
+
+ol, ul {
+  padding-left: 20px;
+}
+/*第一部分*/
+#firstSec {
+  position: fixed;
+  width: 100px;
+  height: 100%;
+  background-color: rgb(29, 37, 49);
+}
+
+#firstSec li {
+  display: inline-block;
+  list-style: none;
+}
+
+#bottomIcro {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  margin: 0 auto;
+}
+
+#bottomIcro img {
+  width: 20px;
+  margin-left: 5px; 
+}
+
+
+/*第二部分*/
+#secondSec {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  margin-left: 100px;
+  font-size: 10px;
+  background-color: rgb(34, 44, 60);
+  color: rgb(183, 192, 205);
+}
+
+#secondSec li{
+  list-style: none;
+  margin-top: 3px;
+}
+
+#secondSec .rightImg {
+  float: right;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+#secondSec img{
+  float: left;
+}
+
+#secondSec li p{
+  width: 170px;
+  margin-left: 35px;
+}
+
+#secondSec li h5{
+  display: inline-block;
+  margin: 15px;
+  margin-left: 0px;
+}
+
+#secondSec li aside{
+  float: right;
+  margin-right: 15px;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 0px 10px;
+  text-align: center;
+  color: white;
+}
+
+.blueBGC{
+  background-color: rgb(45,161,247);
+}
+
+.purpleBGC{
+  background-color: rgb(146,126,228);
+}
+
+#secondSec li .redBGC{
+  background-color: rgb(230,69,40);
+  padding: 0px 5px;
+}
+
+#bottomText{
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  size: 14px;
+}
+
+#bottomText table{
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+#bottomText img{
+  position: absolute;
+  margin-left: 10px;
+  bottom: 25px;
+}
+
+/*第三部分*/
+#thirdSec {
+  position: absolute;
+  width: 700px;
+  height: 70px;
+  margin-left: 300px;
+  border:1px solid gray;
+}
+
+#thirdSec div {
+  position: absolute;
+  width: 100px;
+  right: 30px;
+  display: inline-block;
+}
+
+#thirdSec span {
+  position: absolute;
+  margin-left: 30px;
+  font-size: 20px;
+  font-weight:bold;
+  text-align: left;
+  top: 20px;
+}
+
+.faceImg1 {
+  position: absolute;
+  top: 10px;
+  right: 100px;
+}
+
+.faceImg2 {
+  position: absolute;
+  top: 43px;
+  right: 103px;
+}
+
+#thirdSec dl {
+  width: 95px;
+  margin-top: 15px;
+  font-size: 5px;
+  display: inline-block;
+}
+
+#thirdSec dd {
+  margin-left: 0px;
+  margin-right: 50px;
+}
+
+.asideImg {
+  position: absolute;
+  top: 30px;
+  right: 0px;
+}
+
+
+#thirdSec #thridLeft {
+  float: left;
+}
+
+#thirdSec #thridRight {
+  width: 350px;
+  float: right;
+  margin-top: 150px;
+  overflow: hidden;
+}
+
+#thirdSec #thridRight img{
+  height: 300px;
+  margin-right: 0px;
+}
+
+/*第四部分*/
+#forthSec {
+  position: absolute;
+  width: 270px;
+  height: 825px;
+  margin-top: 70px;
+  margin-left: 300px;
+  text-align: left;
+}
+
+/*搜索部分*/
+#forthSec div {
+  height: 35px;
+  padding-left: 15px;
+  border:1px solid black;
+}
+
+#forthSec span {
+  position: absolute;
+  top: 5px;
+  width: 85%;
+  height: 30px;
+  border:1px solid black;
+}
+
+#forthSec input {
+  width: 83%;
+  height: 80%;
+  border-style:none;
+}
+
+#forthSec button {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+  margin-right: 10px;
+  background-image: url("images/Search_icon.png");
+  background-color:transparent;
+}
+
+/*联系人部分*/
+#forthSec article {
+  border: 1px solid gray;
+  padding-left: 15px;
+  padding-top: 5px;
+}
+#forthSec img {
+  float: left;
+  height: 60px;
+}
+
+#forthSec dl {
+  padding-top: 12px;
+  
+  font-size: 5px;
+  /*display: inline-block;*/
+}
+
+#forthSec dd {
+  width: 100%;
+  margin-left: 0px;
+}
+
+#forthSec article aside{
+  margin-top: 5px;
+  float: right;
+  margin-right: 10px;
+  text-align: center;
+}
+
+#forthSec article > aside{
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 0 5px;
+  background-color: rgb(44,160,246);
+}
+
+.displayNone {
+  display: none;
+}
+
+#forthSec p {
+  width: 85%;
+  height: 30px;
+  overflow: hidden;
+  font-size: 5px;
+}
+
+
+/*第五部分*/
+#fifthSec  {
+  position: absolute;
+  width: 430px;
+  height: 825px;
+  margin-top: 70px;
+  margin-left:570px;
+  border:1px solid gray;
+}
+
+li {
+  list-style: none;
+}
+
+#fifthSec > div {
+  height: 35px;
+  border: 1px solid gray;
+}
+
+#fifthSec div > span {
+  position: relative;
+  margin-top: 7px;
+}
+
+#fifthSec div > aside {
+  float: right;
+  margin-top: 7px;
+  letter-spacing: -1px;
+
+}
+
+#buttonGroup,#pageGroup {
+  display: inline-block;
+  letter-spacing: -8px;
+}
+
+#fifthSec article {
+  border: 1px solid gray;
+}
+
+
+#fifthSec span {
+  display: inline-block;
+}
+
+#fifthSec span > aside {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+#fifthSec ol img {
+  float: left;
+  height: 60px;
+  padding-left: 15px;
+}
+
+#fifthSec p {
+  height: 60px;
+  margin-left: 66px;
+  overflow: auto;
+}
+
+.imgGroup {
+  display: flex;
+}
+
+#addIcon {
+  width: 385px;
+  height: 40px;
+  margin: 8px auto;
+  border:1px solid black;
+}
+
+#fifthSec #addIcon > img {
+  padding: 10px;
+  height: 20px;
+  border: 1px solid gray;
+}
+
+#addIcon input {
+  width: 300px;
+  height: 34px;
+  border: none;
+}
+
+#fifthSec > article > aside {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  width: 120px;
+  top:-10px;
+  background: white;
+}
+
+.highlight {
+  position: relative;
+  margin-top: 30px;
+  vertical-align: middle;
+}
+footer {
+  clear: both;
+  color: gray;
+  background-color: black;
+}
+
+footer article{
+  float: left;
+  width: 25%;
+  height: 200px;
+  background-color: black;
+}
+
+footer h5{ 
+  padding-left: 40px;
+  color: white;
+  background-color: black;
+}
+
+footer article:nth-of-type(4) h5{ 
+  padding-left: 0px;
+}
+
+footer ol li { 
+  list-style: none;
+}
+footer ul  {
+  padding-left: 0px;
+}
+
+footer ul li {
+  display: unset;
+  padding-right: 10px;
+}
+
