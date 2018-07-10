@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>
+    <h1>Demo</h1>
+    <p id="content-wrapper">Hello World</p>
+    <script>
+        console.log(document.getElementById("content-wrapper").innerHTML);
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>
+    <h1>Demo</h1>
+    <p id="content-wrapper">你是谁？</p>
+    <input id="name-input" type="text" placeholder="输入你的名字">
+    <button id="send-btn">发送</button>
+    <script>        
+        document.getElementById("send-btn").onclick = function() {
+            document.getElementById("content-wrapper").innerHTML = 'Hello ' + document.getElementById("name-input").value;
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+person=new Object();
+person.firstname="Bill";
+person.lastname="Gates";
+person.age=56;
+person.eyecolor="blue";
+document.write("</br>"+person.firstname + " is " + person.age + " years old.</br>");
+document.write("<span>"+person.firstname + " 's eyecolor is" + person.eyecolor+ " lastname is"+ person.lastname+"</span>");
+</script>
+
+</body>
+</html>
