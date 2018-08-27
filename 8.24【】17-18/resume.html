@@ -1,0 +1,88 @@
+<!DOCTYPE>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>J's Resume</title>
+  <link href="cResume.css" rel="stylesheet" type="text/css">
+  <header></header>
+</head>
+<body>
+  <section class="resume"><h1>简历</h1></section>
+  <section class="profile">
+    <ul id="base-info">
+      <article class="asideLeft">
+        <h2>基本信息</h2>
+      </article>
+      <article class="asideR">
+        <li><strong>姓名:</strong> 张三</li>
+        <li><strong>性别:</strong> 男</li>
+        <li><strong>应聘岗位:</strong> <button id="moreD">前端工程师</button></li>
+        <text id="more"></text>
+      </article>
+    </ul>
+  </section>
+  <section>
+    <ul id="contacts">
+      <article class="asideLeft">
+        <h2>联系方式</h2>
+      </article>
+      <article class="asideR">
+        <li><strong>手机:</strong> 12312341234</li>
+        <li><strong>Email:</strong> <a href="mailto:000@qq.com" target="_blank">joinefe@baidu.com<a></li>
+          <li><strong>个人主页:</strong><a href="https://github.com" target="_blank">Github</a></li>
+        </article>
+      </ul>
+    </section>
+    <section id="ability">
+      <article class="asideLeft">
+        <h2>能力描述</h2>
+      </article>
+      <article><strong>技术能力</strong>
+        <div>熟练掌握HTML,CSS,JavaScript</div>
+      </article>
+      <article><strong>综合能力</strong>
+        <div>良好的沟通，主动积极，努力勤奋</div>
+      </article>
+    </section>
+    <section id="education">
+      <article class="asideLeft">
+        <h2>教育经历</h2>
+      </article>
+      <article><strong>本科</strong>
+        <div>百度前端技术学院小薇学院</div>
+      </article>
+      <article><strong>研究生</strong>
+        <div>百度前端技术学院大斌学院</div>
+      </article>
+    </section>
+    <section id="experience">
+      <article class="asideLeft">
+        <h2>项目经历</h2>
+      </article>
+      <article><strong>小度小度</strong>
+        <div>作为前端工程师角色参与了ABC组件的开发</div>
+      </article>
+      <article><strong>SAN Doc</strong>
+        <div>作为文档工程师参与了SAN Doc编写</div>
+      </article>
+    </section>
+  </body>
+  <script>
+    var myDate = new Date().getHours();
+    if (myDate>=12&&myDate<17)
+    {
+      alert("中午好");
+    }
+    else if(myDate>=17&&myDate<=23)
+    {
+      alert("晚上好");
+    }
+    else
+    {
+      alert("早上好");
+    }
+    document.getElementById("moreD").onclick = function() {
+            document.getElementById("more").innerHTML = 'Hello html css javaScript ';
+  }
+  </script>
+  </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>        
+    <input id="first-number" type="number" value="0" placeholder="第一个数字">
+    <input id="second-number" type="number" value="0" placeholder="第二个数字">
+        <button id="divide-btn" onclick="calc()">进行运算</button>
+    <p id="result">运算结果</p>
+    <script>
+    var fn,sn = null;
+    var result = "";
+    
+    function getn()
+    {
+        fn = Number(document.getElementById("first-number").value),
+        sn = parseFloat(document.getElementById("second-number").value);
+    }
+
+    function calc(){
+        getn();
+        if (fn > sn) 
+        {
+            console.log("第一个数应小于第二个数");
+            return;
+        }
+        result = ""
+        for (i = fn;i <= sn; i++)
+        {
+            if(i%3 == 0)
+            {
+                result = result + ",PA<br>\n";
+            }
+            else
+            {
+                result = result + "," + i.toString();
+            }
+        }
+        result = result.slice(1) ;
+        putn();
+    }
+
+    function putn(){
+    document.getElementById("result").innerHTML = '运算结果:'+ result;
+    console.log(result);
+    }
+    </script>
+</body>
+</html>

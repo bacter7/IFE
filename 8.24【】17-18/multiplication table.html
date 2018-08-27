@@ -1,0 +1,79 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">    
+        <title>IFE ECMAScript</title>
+    </head>
+    <body>        
+        <input id="first-number" type="number" value="0" placeholder="第一个数字">
+        <input id="second-number" type="number" value="0" placeholder="第二个数字">
+        <button id="go" onclick="multTable()">生成乘法表</button>
+        <p id="result">运算结果</p>
+        <table id="attachtab" border="0" cellpadding="0" cellspacing="0"></table>
+        <script>
+            var fn,sn = null;
+            var result = [];
+            
+            function getn()
+            {
+                fn = Number(document.getElementById("first-number").value),
+                sn = parseFloat(document.getElementById("second-number").value);
+            }
+
+            function multTable(){
+                getn();
+                if (fn > sn) 
+                {
+                    console.log("第一个数应小于第二个数");
+                    return;
+                }
+                var k = 0;
+                for (i = 1;i <= fn; i++)
+                {
+                    for (j = 1;j <= i& j<=sn; j++)
+                    {
+                        result[k++] = i * j;
+                    }
+                }
+                putn();
+            }
+    //j是行，i是列
+    function putn(){
+        var html = "";
+        var t=document.getElementById("attachtab") ;  
+        var arr = [];
+        var k=0,m=0;
+        for (var i = 0;i<fn;i++) 
+        {
+         for (var j = 0; j<=i;j++)
+         {
+            console.log(result[k])
+            html=html+ " "+ (j+1) + "*" + (i+1) + "=" + result[k]; 
+            arr[m++]= (j+1) + "*" + (i+1) + "=" + result[k++];
+            
+        }
+        console.log('<br>');
+        arr[m++] = '\n';
+        html = html + "<br>"
+    }
+    document.getElementById("result").innerHTML = '运算结果:<br>\n'+ result;
+    console.log(arr);
+    t.innerHTML=html
+}
+</script>
+
+<script language="JavaScript">
+  var t=document.getElementById("test") ;  
+  t.innerHTML="<tr><td>数据</td></tr>";  
+    //或者  
+    var t=document.getElementById("test") ;  
+    
+    var tr=document.createElement("tr");  
+    var td=doucment.createElement("td");  
+    td.innerHTML="数据";  
+    tr.appendChild(td);  
+    t.appendChild(tr);  
+}
+</script>
+</body>
+</html>

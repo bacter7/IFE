@@ -26,8 +26,9 @@
     <input id="name-input" type="text" placeholder="输入你的名字">
     <button id="send-btn">发送</button>
     <script>        
+    var d=new Date().getDay();
         document.getElementById("send-btn").onclick = function() {
-            document.getElementById("content-wrapper").innerHTML = 'Hello ' + document.getElementById("name-input").value;
+            document.getElementById("content-wrapper").innerHTML =d+ 'Hello ' + document.getElementById("name-input").value;
         }
     </script>
 </body>

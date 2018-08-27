@@ -16,7 +16,8 @@
       <article class="asideR">
         <li><strong>姓名:</strong> 张三</li>
         <li><strong>性别:</strong> 男</li>
-        <li><strong>应聘岗位:</strong> Web前端工程师</li>
+        <li><strong>应聘岗位:</strong> <button id="moreD">前端工程师</button></li>
+        <text id="more"></text>
       </article>
     </ul>
   </section>
@@ -66,4 +67,9 @@
       </article>
     </section>
   </body>
+  <script>
+    document.getElementById("moreD").onclick = function() {
+            document.getElementById("more").innerHTML = 'Hello html css javaScript ';
+  }
+  </script>
   </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>        
+    <input id="first-number" type="number" value="0" placeholder="第一个数字">
+    <input id="second-number" type="number" value="0" placeholder="第二个数字">
+    <button id="add-btn" onclick="addFunction()">加</button>
+    <button id="minus-btn" onclick="subFunction()">减</button>
+    <button id="times-btn" onclick="mulFunction()">乘</button>
+    <button id="divide-btn" onclick="divFunction()">除</button>
+    <p id="result">运算结果</p>
+    <script>
+    var fn,sn,result = null;
+    
+    function getn()
+    {
+        fn = Number(document.getElementById("first-number").value),
+        sn = parseFloat(document.getElementById("second-number").value);
+    }
+
+    function addFunction(){
+        getn();
+debugger
+        if (isNaN(fn))
+        {
+            console.log("fn isNan");
+        }
+
+
+        result = fn + sn;
+        putn();
+    }
+    function subFunction(){
+        getn();
+        result = fn - sn;
+        putn();
+    }
+    function mulFunction(){
+        getn();
+        result = fn * sn;
+        putn();
+    }
+    function divFunction(){
+        getn();
+        debugger
+        if (sn==0) 
+        {
+            console.log("分母不能为0");
+            return;
+        }
+        result = fn / sn;
+        putn();
+    }
+
+    function putn(){
+    document.getElementById("result").innerHTML = '运算结果:'+ result;
+    }
+    </script>
+</body>
+</html>

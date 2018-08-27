@@ -1,10 +1,10 @@
 如何理解 Web 语义化？
 
-1. 语义化的原因
+1. ##### 语义化的原因
 
    > 让机器可以读懂内容
 
-2. 顾轶灵的Semantic HTML 
+2. ##### 顾轶灵的Semantic HTML 
 
    > http://justineo.github.io/slideshows/semantic-html/#/
 

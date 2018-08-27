@@ -1,0 +1,301 @@
+* {
+  
+}
+
+body {
+  width: 800px;
+  margin: 0 auto;
+}
+
+section {
+  border:1px solid gray;
+}
+/*第一部分*/
+#firstSec {
+  width: 100%;
+  height: 450px;
+  margin: 0px;
+  background-image: url(./images/Background-1.png);
+  background-size: 100%;
+  text-align: center;
+}
+
+#firstSec h1 {
+  width: 500px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+#firstSec article {
+  width: 500px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+#firstSec #first1Art {
+  margin: 0px auto;
+  padding-top: 100px;
+}
+
+#firstSec article div {
+  border:1px solid gray;
+}
+
+#firstSec article div p:nth-of-type(1) {
+  margin: 0px ;
+  text-align: left;
+}
+
+
+#firstSec article div input{
+  width: 30%;
+  height: 25px;
+  margin: 0px auto 15px;
+  background-color: transparent;
+}
+
+#firstSec article div button{
+  width: 15%;
+  height: 25px;
+  margin: 0px auto 15px;
+}
+
+/*第二部分*/
+#secondSec article {
+  padding-top: 50px;
+  text-align: center;
+}
+
+#icon_group ul {
+  padding-left: 0px;
+}
+#icon_group ul li {
+  width: 49%;
+  margin-top: 10px;
+  vertical-align: top;
+  display: inline-block;
+}
+
+#icon_group ul li img{
+  float: left;
+  width: 35px;
+  margin-top: 15px;
+}
+
+#icon_group ul li h4{
+ text-align: left;
+}
+
+#icon_group ul li p{
+ margin-left: 35px;
+ text-align: left;
+}
+
+/*第三部分*/
+#thirdSec {
+  width: 100%;
+  height: 500px;
+  background-image: url(./images/Background-2.png);
+}
+
+#thirdSec article {
+  width: 300px;
+  padding-top: 35px;
+  margin-left: 100px;
+  text-align: left;
+}
+
+#thirdSec #third1Art {
+  padding-top: 150px;
+}
+
+#thirdSec article div button {
+  width: 140px;
+  height: 35px;
+  text-align: left;
+}
+
+#thirdSec #thridLeft {
+  float: left;
+}
+
+#thirdSec #thridRight {
+  width: 350px;
+  float: right;
+  margin-top: 150px;
+  overflow: hidden;
+}
+
+#thirdSec #thridRight img{
+  height: 300px;
+  margin-right: 0px;
+}
+
+/*第四部分*/
+#forthSec {
+  height: 420px;
+  text-align: center;
+}
+#forthSec > p:nth-of-type(1) {
+  padding-top: 50px;
+}
+
+#forthSec article {
+  float: left;
+  width: 27%;
+  margin: auto 25px;
+}
+
+/*第五部分*/
+#fifthSec  {
+  overflow: auto;
+  padding: 25px auto;
+}
+#fifthSec article {
+  display: inline-block;
+  width: 30%;
+  margin: 25px 25px;
+}
+
+#fifthSec img {
+  width: 55%;
+  margin: 25px 25px;
+}
+
+#fifthSec img:nth-of-type(1) {
+  float: left;
+
+}
+
+#fifthSec img:nth-of-type(2) {
+  float: right;
+
+}
+
+/*第六部分*/
+#sixthSec {
+  padding: 25px auto;
+  text-align: center;
+}
+#sixthSec article{
+  width: 55%;
+  margin: 20px auto;
+}
+#img_group li{
+  display: inline-block;
+  width: 45%;
+  height: 260px;
+}
+
+#img_group img,#ns{
+  width: 100%;
+  height: 100%;
+  padding: 25px auto;
+}
+
+/*实现有问题，先这样*/
+#ns{
+  display: inline-block;
+  background-image: url(./images/xr_22.png);
+  background-size: 105%;
+}
+
+#ns:hover{
+  background-image: url(./images/xr_23.png);
+}
+
+/*第七部分*/
+#seventhSec {
+  height: 500px;
+  text-align: left;
+}
+
+#seventhSec div {
+  float: left;
+  width: 300px;
+  margin-top: 55px;
+  margin-left: 100px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#seventhSec div input,textarea,button{
+  width: 80%;
+  text-align: left;
+  margin-top: 20px;
+}
+
+#seventhSec div input,button{
+  height: 24px;
+}
+
+#seventhSec div button{
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin-bottom: 40px;
+}
+
+#seventhSec article,aside {
+  margin-top: 70px;
+  width: 300px;
+  margin-left: 480px;
+}
+
+#seventhSec aside ul {
+  padding-left: 0px;
+  width: 255px;
+}
+
+#seventhSec aside li {
+  width: 255px;
+  height: 30px;
+  display: unset;
+}
+
+#seventhSec aside li img{
+  float: left;
+}
+
+#seventhSec aside li p{
+  width: 280px;
+  height: 30px;
+  margin-left: 40px;
+}
+
+footer {
+  clear: both;
+  color: gray;
+  background-color: black;
+}
+
+footer article{
+  float: left;
+  width: 25%;
+  height: 200px;
+  background-color: black;
+}
+
+footer h5{ 
+  padding-left: 40px;
+  color: white;
+  background-color: black;
+}
+
+footer article:nth-of-type(4) h5{ 
+  padding-left: 0px;
+}
+
+footer ol li { 
+  list-style: none;
+}
+footer ul  {
+  padding-left: 0px;
+}
+
+footer ul li {
+  display: unset;
+  padding-right: 10px;
+}
+
