@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+	<input id="stack-input" type="text">
+	<p id="stack-cont">栈内容：apple-&gt;pear</p>    
+	<button id="push-btn">进栈</button>
+	<button id="pop-btn">退栈</button>
+	<button id="font-btn">打印栈顶元素内容</button>
+	<button id="empty-btn">判断栈是否为空</button>
+
+<script type="text/javascript">
+
+	var stack = ["apple", "pear"];
+	var obtList = document.querySelectorAll("button");
+	var newInp = document.querySelector("input"),
+		newLine = document.querySelector("p");
+
+
+	var scoreObject = {
+	    "Tony": {
+	        "Math": 95,
+	        "English": 79,
+	        "Music": 68
+	    }, 
+	    "Simon": {
+	        "Math": 100,
+	        "English": 95,
+	        "Music": 98
+	    }, 
+	    "Annie": {
+	        "Math": 54,
+	        "English": 65,
+	        "Music": 88
+	    }
+	};
+debugger
+var scoreArr = [];
+
+var m=0,n=0;
+for(var i in scoreObject)
+{
+	var scoreEveArr = [];
+	scoreEveArr.push(i);
+	console.log(i);
+	for(var j in scoreObject[i]){
+		scoreEveArr.push(scoreObject[i][j]);
+		console.log(scoreObject[i][j]);
+	}
+	scoreArr.push(scoreEveArr);
+}
+
+
+
+var menuObject = {
+    "1": {
+        name: "Area1",
+        subMenu: {
+            "3": {
+                name: "Area1-1"
+            },
+            "4": {
+                name: "Area1-2",
+                subMenu: {
+                    "7": {
+                        name: "Area1-2-3"
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+console.log(JSON.stringify(menuObject));
+debugger
+
+console.log(scoreArr);
+	var scoreString = JSON.stringify(scoreObject,["Math","English","Music"]);
+	var scoreEve = scoreString.split(",");
+
+
+	debugger;
+</script>
+</script>
+</body>
+</html>

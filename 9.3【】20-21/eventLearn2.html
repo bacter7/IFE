@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Random color example — event handler property</title>
+
+</head>
+<body>
+  <input id="name" type="text">    
+  <button id="submit-btn">Submit</button>
+
+  <script>
+    var btn = document.querySelector('#submit-btn');
+    btn.onclick = bgChange0;    
+
+    function bgChange0() {
+      bgChange1();
+    }
+
+    function bgChange1(){
+      var name0 = document.querySelector('#name');
+      var text = name0.value;
+      alert(text);
+      console.log(text);
+    }
+
+    document.onkeypress = function(e){
+      debugger;
+        // 获取事件
+        e = e || window.event; 
+        // 获取按键编码
+        var key = e.whick || e.keyCode; 
+        // 检测是否为回车键
+        if(key == 13){
+            bgChange1();;
+        }
+    }
+
+    document.addEventListener("keydown",OMG,true)
+      function OMG(e){
+        var name0 = document.querySelector('#name');
+        // 获取事件
+        e = e || window.event; 
+        // 获取按键编码
+        var key = e.whick || e.keyCode; 
+        // 检测是否为ESC键
+        if(key == 27){
+            name0.value = "";
+        }
+      }
+
+
+  </script>
+</body>
+</html>

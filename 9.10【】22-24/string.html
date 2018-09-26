@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String</title>
+<style type="text/css">
+/*    textarea{
+        resize: none;
+    }*/
+</style>
+</head>
+<body>
+<div>
+    <label>String A:
+        <input id="radio-a" type="radio" checked="true" name="str-obj" value="a">
+    </label>
+    <textarea id="str-a"></textarea>
+    <label>String B:
+        <input id="radio-b" type="radio" name="str-obj" value="b">
+    </label>
+  <textarea id="str-b"></textarea>    <br/>    
+    <label>Num A：<input id="num-a" type="number" value="0"></label>
+    <label>Num B：<input id="num-b" type="number" value="1"></label>
+</div>
+<div>  
+    <button>获取当前选中输入的内容长度</button><br/>
+    <button>当前选中输入中的第3个字符</button><br/>
+    <button>把两个输入框的文字连接在一起输出（concat）</button><br/>
+    <button>输入B中的内容，在输入A的内容中第一次出现的位置（indexOf）</button><br/>
+    <button>输入A中的内容，在输入B的内容中最后一次出现的位置（lastIndexOf）</button><br/>
+    <button>使用slice获取选中输入框内容的部分内容，参数为num-a及num-b</button><br/>
+    <button>当前选中输入框的行数</button><br/>
+    <button>使用substr获取选中输入框内容的子字符串，参数为num-a及num-b</button><br/>
+    <button>把所选输入框中的内容全部转为大写</button><br/>
+    <button>把所选输入框中的内容全部转为小写</button><br/>
+    <button>把所选输入框中内容的半角空格全部去除</button><br/>
+    <button>把所选输入框中内容的a全部替换成另外一个输入框中的内容</button>
+</div>
+<p id="result"></p>
+
+<script type="text/javascript">
+    var oRA = document.querySelector("#radio-a"),
+        oRB = document.querySelector("#radio-b"),
+        oSA = document.querySelector("#str-a"),
+        oSB = document.querySelector("#str-b"),
+        oNA = document.querySelector("#num-a"),
+        oNB = document.querySelector("#num-b"),
+        oP  = document.querySelector("#result");
+
+
+    var obtList = document.querySelectorAll("button"),
+        oinList = document.querySelectorAll("input[type='radio']");
+
+    for (var i = obtList.length - 1; i >= 0; i--) 
+    {
+        obtList[i].onclick = function (ev)
+        {
+            oP.innerHTML = "";
+            var e = ev.target;
+
+            if (e == obtList[0])
+            {
+                getLen();
+            }
+            else if (e == obtList[1])
+            {
+                thrWord();
+            }
+            else if (e == obtList[2])
+            {
+                conText();
+            }
+            else if (e == obtList[3])
+            {
+                indexOfFirst();
+            }
+            else if (e == obtList[4])
+            {
+                indexOfLast();
+            }
+            else if (e == obtList[5])
+            {
+                getSlice();
+            }
+            else if (e == obtList[6])
+            {
+                getRows();
+            }
+            else if (e == obtList[7])
+            {
+                getSubstr();
+            }
+            else if (e == obtList[8])
+            {
+                getUpper();
+            }
+            else if (e == obtList[9])
+            {
+                getLower();
+            }
+            else if (e == obtList[10])
+            {
+                replaceSpace();
+            }
+            else
+            {
+                replaceWord();
+            }
+        }
+    }
+
+    function isChecked(obj)
+    {
+        if (obj.checked)
+            return 1;
+        else
+            return 0;
+    }
+
+    function isNull(obj)
+    {
+        if (obj.value == "") 
+            return alert(obj.id + " is Null");
+        else
+            return 0;
+    }
+
+    function getLen()
+    {
+        if (isChecked(oRA))
+        {
+            if (!isNull(oSA)) 
+            {
+                return oP.innerHTML = oSA.value.length;
+            }
+        }
+        else
+        {
+            if (!isNull(oSB)) 
+            {
+                return oP.innerHTML = oSB.value.length;
+            }
+        }
+    }
+
+
+    function thrWord()
+    {
+        if (isChecked(oRA))
+        {
+            if (!isNull(oSA)) 
+            {
+                return oP.innerHTML = oSA.value[2];
+            }
+        }
+        else
+        {
+            if (!isNull(oSB)) 
+            {
+                return oP.innerHTML = oSB.value[2];
+            }
+        }
+    }
+
+    function conText()
+    {
+        if (!isNull(oSA)&&!isNull(oSB)) 
+        {
+            return oP.innerHTML = oSA.value.concat( oSB.value);
+        }
+    }
+    
+    function indexOfFirst()
+    {
+        if (!isNull(oSA)&&!isNull(oSB)) 
+        {
+            return oP.innerHTML = oSA.value.indexOf( oSB.value);
+        }
+    }
+
+    function indexOfLast()
+    {
+        if (!isNull(oSA)&&!isNull(oSB)) 
+        {
+            return oP.innerHTML = oSA.value.lastIndexOf( oSB.value);
+        }
+    }
+    
+    function getSlice()
+    {debugger;
+        if (isChecked(oRA))
+        {
+            if (!isNull(oSA)) 
+            {
+                return oP.innerHTML = oSA.value.slice(Math.min(oNA.value,oNB.value),Math.max(oNA.value,oNB.value));
+            }
+        }
+        else
+        {
+            if (!isNull(oSB)) 
+            {
+                return oP.innerHTML = oSB.value.slice(Math.min(oNA.value,oNB.value),Math.max(oNA.value,oNB.value));
+            }
+        }
+    }
+    
+    function getRows()
+    {debugger;
+        if (isChecked(oRA))
+        {
+            return oP.innerHTML = oSA.value.split(/\n/).length;
+        }
+        else
+        {
+            return oP.innerHTML = oSB.value.split(/\n/).length;
+        }
+    }
+    
+    function getSubstr()
+    {debugger;
+        if (isChecked(oRA))
+        {
+            if (!isNull(oSA)) 
+            {
+                return oP.innerHTML = oSA.value.substr(oNA.value,oNB.value);
+            }
+        }
+        else
+        {
+            if (!isNull(oSB)) 
+            {
+                return oP.innerHTML = oSB.value.substr(oNA.value,oNB.value);
+            }
+        }
+    }
+
+    function getUpper()
+    {debugger;
+        if (isChecked(oRA))
+        {
+            if (!isNull(oSA)) 
+            {
+                return oP.innerHTML = oSA.value.toUpperCase();
+            }
+        }
+        else
+        {
+            if (!isNull(oSB)) 
+            {
+                return oP.innerHTML = oSB.value.toUpperCase();
+            }
+        }
+    }
+
+    function getLower()
+    {debugger;
+        if (isChecked(oRA))
+        {
+            if (!isNull(oSA)) 
+            {
+                return oP.innerHTML = oSA.value.toLowerCase();
+            }
+        }
+        else
+        {
+            if (!isNull(oSB)) 
+            {
+                return oP.innerHTML = oSB.value.toLowerCase();
+            }
+        }
+    }
+
+    function replaceSpace()
+    {debugger;
+        if (isChecked(oRA))
+        {
+            if (!isNull(oSA)) 
+            {
+                return oP.innerHTML = oSA.value.replace(/ /g,"");
+            }
+        }
+        else
+        {
+            if (!isNull(oSB)) 
+            {
+                return oP.innerHTML = oSB.value.replace(/ /g,"");
+            }
+        }
+    }
+
+    function replaceWord()
+    {debugger;
+        if (isChecked(oRA))
+        {
+            if (!isNull(oSA)) 
+            {
+                return oP.innerHTML = oSA.value.replace(/a/g,oSB.value);
+            }
+        }
+        else
+        {
+            if (!isNull(oSB)) 
+            {
+                return oP.innerHTML = oSB.value.replace(/a/g,oSA.value);
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

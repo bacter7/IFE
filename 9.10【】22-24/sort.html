@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+	<input id="stack-input" type="text">
+	<p id="stack-cont">内容：</p>    
+	<button id="push-btn">进栈</button>
+	<button id="pop-btn">退栈</button>
+	<button id="font-btn">打印栈顶元素内容</button>
+	<button id="empty-btn">判断栈是否为空</button>
+
+<script type="text/javascript">
+
+	var stack = ["apple", "pear"];
+	var obtList = document.querySelectorAll("button");
+	var newInp = document.querySelector("input"),
+		newLine = document.querySelector("p");
+
+	var arrNumber = [43, 54, 4, -4, 84, 100, 58, 27, 140];
+	var arrString = ['apple', 'dog', 'cat', 'car', 'zoo', 'orange', 'airplane'];
+	var arrArray = [[10, 14], [16, 60], [7, 44], [26, 35], [22, 63]];
+	var arrObj = [
+    {
+        id: 1,
+        name: 'candy',
+        value: 40
+    }, {
+        id: 2,
+        name: 'Simon',
+        value: 50
+    }, {
+        id: 3,
+        name: 'Tony',
+        value: 45
+    }, {
+        id: 4,
+        name: 'Annie',
+        value: 60
+    }
+];
+	selfSortNumber(arrNumber);
+	selfSortString(arrString);
+	selfSortArray(arrArray);
+	selfSortObj(arrObj);
+
+	function selfSortNumber(arr){
+		console.log(arr.sort((a,b)=>(b-a)));
+		console.log(arr.sort((a,b)=>(a-b)));
+	}
+
+	function selfSortString(arr){
+		console.log(arr.sort());
+		console.log(arr.reverse());
+	}	
+
+	function selfSortArray(arr){
+		console.log(arr.sort((a,b)=>b[1]-a[1]));
+	}
+
+	function selfSortObj(arr){
+		console.log(arr.sort((a,b) => a.value-b.value));
+	}	
+</script>
+</script>
+</body>
+</html>

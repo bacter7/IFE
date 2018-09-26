@@ -35,7 +35,7 @@
                         result[k++] = i * j;
                     }
                 }
-                putn();
+                putn1();
             }
     //j是行，i是列
     function putn(){
@@ -60,20 +60,47 @@
     console.log(arr);
     t.innerHTML=html
 }
+
+    function putn1(){
+        
+        //创建 table 
+        var table=document.getElementById("attachtab") ; 
+        table.innerHTML = "" ;
+        var k=0;
+
+        var tbody = document.createElement("tbody"); 
+            table.appendChild(tbody)
+                
+        for (var i = 0;i<fn;i++) 
+        {
+            var row1 = document.createElement("tr");
+                tbody.appendChild(row1); 
+         for (var j = 0; j<=i;j++)
+         {
+            console.log(result[k])
+
+            var cell1_1 = document.createElement("td"); 
+            cell1_1.setAttribute('style', 'border:1px solid');
+            cell1_1.appendChild(document.createTextNode((j+1) + "*" + (i+1) + "=" + result[k++])); 
+            row1.appendChild(cell1_1);             
+        }
+        console.log('<br>');
+    }
+}
 </script>
 
 <script language="JavaScript">
-  var t=document.getElementById("test") ;  
-  t.innerHTML="<tr><td>数据</td></tr>";  
-    //或者  
-    var t=document.getElementById("test") ;  
+  // var t=document.getElementById("test") ;  
+  // t.innerHTML="<tr><td>数据</td></tr>";  
+  //   //或者  
+  //   var t=document.getElementById("test") ;  
     
-    var tr=document.createElement("tr");  
-    var td=doucment.createElement("td");  
-    td.innerHTML="数据";  
-    tr.appendChild(td);  
-    t.appendChild(tr);  
-}
+  //   var tr=document.createElement("tr");  
+  //   var td=doucment.createElement("td");  
+  //   td.innerHTML="数据";  
+  //   tr.appendChild(td);  
+  //   t.appendChild(tr);  
+
 </script>
 </body>
 </html>

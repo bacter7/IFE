@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+	<input id="stack-input" type="text">
+	<p id="stack-cont">栈内容：apple-&gt;pear</p>    
+	<button id="push-btn">进栈</button>
+	<button id="pop-btn">退栈</button>
+	<button id="font-btn">打印栈顶元素内容</button>
+	<button id="empty-btn">判断栈是否为空</button>
+
+<script type="text/javascript">
+
+	var stack = ["apple", "pear"];
+	var obtList = document.querySelectorAll("button");
+	var newInp = document.querySelector("input"),
+		newLine = document.querySelector("p");
+
+
+	for (var i = obtList.length - 1; i >= 0; i--) 
+	    {
+	        obtList[i].onclick = function (ev)
+	        {
+
+	            newInp.innerHTML = "";
+	            var e = ev.target;
+
+	            if (e == obtList[0])
+	            {
+	                pushInE(stack);
+	            }
+	            else if (e == obtList[1])
+	            {
+	                popOutE(stack);
+	            }
+	            else if (e == obtList[2])
+	            {
+	                printFirstE(stack);
+	            }
+	            else
+	            {
+	                isEmptyLine(stack);
+	            }
+	        }
+	    }
+	    function pushInE(stack){
+	    	var newIn = newInp.value;
+	    	if (newIn != "") {
+		    	stack.push(newIn);
+		    	newLine.innerHTML ="队列内容：" + stack.join("->");
+	    	}
+	    	else{
+	    		alert("请输入");
+	    	}
+	    }
+
+	    function popOutE(stack){
+	    	stack.pop();
+	    	newLine.innerHTML ="队列内容：" + stack.join("->");
+	    }
+
+	    function printFirstE(stack){
+	    	if (stack === undefined || stack.length == 0) {
+	    		alert("空空");
+	    	}
+	    	else
+	    	{
+				newLine.innerHTML ="队头元素:" + stack[stack.length-1];
+	    	}
+	    }
+
+	    function isEmptyLine(stack){
+	    	if (stack === undefined || stack.length == 0) {
+	    		alert("空空");
+	    	}
+	    	else
+	    	{
+	    		console.log(stack);
+	    		newLine.innerHTML ="队列内容：" + stack.join("->") + " 队列不为空";
+	    	}
+	    }
+
+
+	    function pushInB(stack){debugger;
+	    	var newIn = newInp.value;
+	    	if (newIn != "") {
+		    	stack.unshift(newIn);
+		    	newLine.innerHTML ="队列内容：" + stack.join("-&lt");
+	    	}
+	    	else{
+	    		alert("请输入");
+	    	}
+	    }
+
+	    function popOutB(stack){
+	    	stack.shift();
+	    	newLine.innerHTML ="队列内容：" + stack.join("-&lt");
+	    }
+
+	    function printFirstB(stack){
+	    	if (stack === undefined || stack.length == 0) {
+	    		alert("空空");
+	    	}
+	    	else
+	    	{
+				newLine.innerHTML ="队头元素:" + stack[0];
+	    	}
+	    }
+
+</script>
+</script>
+</body>
+</html>

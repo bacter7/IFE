@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+	<input id="queue-input" type="text">
+	<p id="queue-cont">队列内容：apple-&gt;pear</p>    
+	<button id="in-btn">入队</button>
+	<button id="out-btn">出队</button>
+	<button id="font-btn">打印队头元素内容</button>
+	<button id="empty-btn">判断队列是否为空</button>
+
+<script type="text/javascript">
+
+	var queue = ["apple", "pear"];
+	var obtList = document.querySelectorAll("button");
+	var newInp = document.querySelector("input"),
+		newLine = document.querySelector("p");
+
+
+	for (var i = obtList.length - 1; i >= 0; i--) 
+	    {
+	        obtList[i].onclick = function (ev)
+	        {
+
+	            newInp.innerHTML = "";
+	            var e = ev.target;
+
+	            if (e == obtList[0])
+	            {
+	                pushInB(queue);
+	            }
+	            else if (e == obtList[1])
+	            {
+	                popOutB(queue);
+	            }
+	            else if (e == obtList[2])
+	            {
+	                printFirstB(queue);
+	            }
+	            else
+	            {
+	                isEmptyLine(queue);
+	            }
+	        }
+	    }
+	    function pushInE(queue){
+	    	var newIn = newInp.value;
+	    	if (newIn != "") {
+		    	queue.push(newIn);
+		    	newLine.innerHTML ="队列内容：" + queue.join("->");
+	    	}
+	    	else{
+	    		alert("请输入");
+	    	}
+	    }
+
+	    function popOutE(queue){
+	    	queue.shift();
+	    	newLine.innerHTML ="队列内容：" + queue.join("->");
+	    }
+
+	    function printFirstE(queue){
+	    	if (queue === undefined || queue.length == 0) {
+	    		alert("空空");
+	    	}
+	    	else
+	    	{
+				newLine.innerHTML ="队头元素:" + queue[queue.length-1];
+	    	}
+	    }
+
+	    function isEmptyLine(queue){
+	    	if (queue === undefined || queue.length == 0) {
+	    		alert("空空");
+	    	}
+	    	else
+	    	{
+	    		console.log(queue);
+	    		newLine.innerHTML ="队列内容：" + queue.join("->") + " 队列不为空";
+	    	}
+	    }
+
+
+	    function pushInB(queue){debugger;
+	    	var newIn = newInp.value;
+	    	if (newIn != "") {
+		    	queue.unshift(newIn);
+		    	newLine.innerHTML ="队列内容：" + queue.join("-&lt");
+	    	}
+	    	else{
+	    		alert("请输入");
+	    	}
+	    }
+
+	    function popOutB(queue){
+	    	queue.pop();
+	    	newLine.innerHTML ="队列内容：" + queue.join("-&lt");
+	    }
+
+	    function printFirstB(queue){
+	    	if (queue === undefined || queue.length == 0) {
+	    		alert("空空");
+	    	}
+	    	else
+	    	{
+				newLine.innerHTML ="队头元素:" + queue[0];
+	    	}
+	    }
+
+</script>
+</script>
+</body>
+</html>

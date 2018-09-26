@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Shopping list example</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+      li button {
+        font-size: 8px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item">
+      <button onclick="addList()">Add item</button>
+    </div>
+
+    <ul>
+
+    </ul>
+
+    <script>
+
+    	var input = document.querySelector('input');
+    	var shopList = document.querySelector('ul');
+    	function addList(){
+    		//处理添加项
+    		var para = document.createElement('li');
+
+    		var paraSpan = document.createElement('span'); 
+    		if (input.value == "")
+    		{
+    			alert("未输入内容！");
+    			return;
+    		}
+    		else
+    		{
+    			paraSpan.textContent = input.value;
+    		}
+    		para.appendChild(paraSpan);
+
+    		var paraButton = document.createElement('button'); 
+    		paraButton.textContent = "deldete";
+    		paraButton.onclick = function() {delList(para)} ;
+			para.appendChild(paraButton);
+    		
+    		shopList.appendChild(para);
+
+    		//处理input，清空并聚焦。
+    		input.value = "";
+    		input.focus();
+    	}
+
+    	function delList(para){
+    		para.parentNode.removeChild(para);
+    	}
+    </script>
+  </body>
+</html>

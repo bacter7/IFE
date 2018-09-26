@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>css sprite</title>
+    <style>
+        div {
+            background-image: url("face.jpg");
+            background-repeat: no-repeat;
+            height: 480px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var oDiv = document.querySelector("div");
+        oDiv.style.backgroundPositionY= 0; 
+        var y =oDiv.style.backgroundPositionY;
+        var flag = true;
+        debugger;
+         setInterval(function () {
+                //从0开始减每次减480
+                while (flag == true) 
+                { 
+                    oDiv.style.backgroundPositionY = (parseInt(oDiv.style.backgroundPositionY) - 480)+"px";
+                    if( parseInt(oDiv.style.backgroundPositionY) == -7680)
+                    {
+                         flag = false;
+                    }
+                    sleep(1000);
+                   
+                }
+                //从8160开始加每次加480
+                while (flag == false) 
+                {
+                    oDiv.style.backgroundPositionY = (parseInt(oDiv.style.backgroundPositionY) + 480)+ "px";
+                    if( parseInt(oDiv.style.backgroundPositionY) == 0)
+                    {
+                         flag = true;
+                    }
+                    sleep(1000);
+                }
+            }, 100);
+                // oDiv.style.backgroundPositionY= y; 
+        
+    </script>
+</body>
+</html>

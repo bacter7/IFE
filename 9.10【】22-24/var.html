@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div>
+    <label>Number A:<input id="radio-a" type="radio" name="math-obj" value="a"></label><input id="num-a" type="text">
+    <label>Number B:<input id="radio-b" type="radio" name="math-obj" value="b"></label><input id="num-b" type="text">
+</div>
+<div>
+    <button>判断当前选中的输入框输入内容是否为数字</button><br/>
+    <button>把 A 四舍五入为 B 个小数位数的数字</button><br/>
+    <button>当前选中数字的绝对值</button><br/>
+    <button>对当前选中的数字进行上舍入</button><br/>
+    <button>对当前选中的数字进行下舍入</button><br/>
+    <button>把当前选中的数字四舍五入为最接近的整数</button><br/>
+    <button>返回 A 和 B 中的最高值</button><br/>
+    <button>返回 A 和 B 中的最低值</button>     <br/>   
+</div>
+<p id="result"></p>
+
+<script type="text/javascript">
+
+    var obtList = document.querySelectorAll("button");
+    var oinList = document.querySelectorAll("input[type='radio']");
+    var op = document.querySelector("#result");
+    var na = document.querySelector("#num-a");
+    var nb = document.querySelector("#num-b");
+
+    for (var i = obtList.length - 1; i >= 0; i--) 
+    {
+        obtList[i].onclick = function (ev)
+        {
+            op.innerHTML = "";
+            var e = ev.target;
+
+            if (e == obtList[0])
+            {
+                isNumberA(na);
+            }
+            else if (e == obtList[1])
+            {
+                fixNumber(na,nb);
+            }
+            else if (e == obtList[2])
+            {
+                absNumber(na,nb);
+            }
+            else if (e == obtList[3])
+            {
+                ceilNumber(na,nb);
+            }
+            else if (e == obtList[4])
+            {
+                floorNumber(na,nb);
+            }
+            else if (e == obtList[5])
+            {
+                roundNumber(na,nb);
+            }
+            else if (e == obtList[6])
+            {
+                maxNumber(na,nb);
+            }
+            else
+            {
+                minNumber(na,nb);
+            }
+        }
+    }
+
+    function minNumber(na,nb)
+    {
+       if(isNumber(na)&&isNumber(nb))
+        {
+            op.innerHTML = Math.min(na.value,nb.value);
+        }
+    }
+
+    function maxNumber(na,nb)
+    {
+       if(isNumber(na)&&isNumber(nb))
+        {
+            op.innerHTML = Math.max(na.value,nb.value);
+        }
+    }
+
+
+    function roundNumber(na,nb)
+    {
+        if(isChecked(oinList[0]))
+        {
+            if(isNumber(na))
+            {
+                op.innerHTML = Math.round(na.value);
+            }
+        }
+        else if (isChecked(oinList[1]))
+        {
+            if(isNumber(nb))
+            {
+                op.innerHTML = Math.round(nb.value);
+            }
+        }
+        else
+        {
+            alert("未选值");
+        }
+    }
+
+    function floorNumber(na,nb)
+    {
+        if(isChecked(oinList[0]))
+        {
+            if(isNumber(na))
+            {
+                op.innerHTML = Math.floor(na.value);
+            }
+        }
+        else if (isChecked(oinList[1]))
+        {
+            if(isNumber(nb))
+            {
+                op.innerHTML = Math.floor(nb.value);
+            }
+        }
+        else
+        {
+            alert("未选值");
+        }
+    }
+
+    function ceilNumber(na,nb)
+    {
+        if(isChecked(oinList[0]))
+        {
+            if(isNumber(na))
+            {
+                op.innerHTML = Math.ceil(na.value);
+            }
+        }
+        else if (isChecked(oinList[1]))
+        {
+            if(isNumber(nb))
+            {
+                op.innerHTML = Math.ceil(nb.value);
+            }
+        }
+        else
+        {
+            alert("未选值");
+        }
+    }
+
+    function absNumber(na,nb)
+    {
+        if(isChecked(oinList[0]))
+        {
+            if(isNumber(na))
+            {
+                op.innerHTML = Math.abs(na.value);
+            }
+        }
+        else if (isChecked(oinList[1]))
+        {
+            if(isNumber(nb))
+            {
+                op.innerHTML = Math.abs(nb.value);
+            }
+        }
+        else
+        {
+            alert("未选值");
+        }
+    }
+
+    function fixNumber(na,nb)
+    {
+        if(isNumber(na)&&isNumber(nb))
+        {
+        var n = JSON.parse(na.value).toFixed(nb.value);
+        op.innerHTML = n;
+        }
+    }
+
+    function isNumber(n)
+    {
+        if (n.value == "")
+        {
+            alert(n.id == "num-a"? "请输入数字A":"请输入数字B");
+        }
+        else if(isNaN(n.value))
+        {
+            alert(n.id == "num-a"? "请输入数字A":"请输入数字B");
+        }
+        else
+        {
+            console.log(n.value);
+            return true;
+        }
+    }
+
+    function isChecked(obj)
+    {
+        if (obj.checked)
+            return 1;
+        else
+            return 0;
+    }
+
+
+    function isNumberA(n)
+    {
+        if (n.value == "")
+        {
+            alert(n.id == "num-a"? "请输入数字A":"请输入数字B");
+        }
+        else if(isNaN(n.value))
+        {
+            alert(n.id == "num-a"? "请输入数字A":"请输入数字B");
+        }
+        else
+        {
+            console.log(n.value);
+            op.innerHTML = n.value;
+        }
+    }
+
+</script>
+</body>
+</html>
